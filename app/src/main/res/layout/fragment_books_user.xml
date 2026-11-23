@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".BooksUserFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/searchEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_search_gray"
+            android:hint="Search"
+            android:padding="10dp"
+            android:textColorHint="@color/gray01"/>
+
+        <ImageButton
+            android:id="@+id/searchImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:layout_marginEnd="10dp"
+            android:src="@android:drawable/ic_menu_gallery"
+            android:background="@color/white"
+            app:tint="@color/accent" />
+    </FrameLayout>
+    <!--Search-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--RecyclerView: Load books-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/booksRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:stackFromEnd="true"
+            app:reverseLayout="true"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_book_user"/>
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/clearSearchImageFbtn"-->
+<!--            android:visibility="invisible"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@android:drawable/ic_menu_close_clear_cancel"-->
+<!--            android:layout_gravity="bottom|end"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            app:tint="@color/white"-->
+<!--            app:fabCustomSize="60dp"-->
+<!--            app:backgroundTint="@color/purple_200" />-->
+
+        <ImageView
+            android:id="@+id/imvPaintImage"
+            android:visibility="gone"
+            android:layout_width="122dp"
+            android:layout_height="122dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="80dp"
+            android:scaleType="fitXY"
+            android:background="@color/gray04" />
+
+        <Button
+            android:id="@+id/clearSearchImageBtn"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="5dp"
+            android:text="Xóa kết quả"
+            android:textAllCaps="false"
+            android:drawableTop="@drawable/ic_delete_white"
+            app:tint="@color/white"
+            app:backgroundTint="@color/accent" />
+    </FrameLayout>
+
+</LinearLayout>

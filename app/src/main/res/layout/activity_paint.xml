@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white"
+tools:context=".activities.PaintActivity">
+
+<!--Toolbar-->
+<RelativeLayout
+    android:id="@+id/paint_toolbarRl"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@drawable/shape_toolbar02">
+
+    <!--Back button-->
+    <ImageButton
+        android:id="@+id/paint_backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_back_white"/>
+
+    <!--Toolbar title-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Draw to search"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
+
+<com.technifysoft.bookapp.tools.SimpleDrawingView
+    android:id="@+id/simpleDrawingView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@id/paint_buttonToolLl"
+    android:layout_below="@id/paint_toolbarRl"
+    android:layout_marginTop="-2dp"
+    android:layout_marginBottom="2dp"
+    android:padding="10dp">
+
+</com.technifysoft.bookapp.tools.SimpleDrawingView>
+
+    <ImageView
+        android:id="@+id/paint_imvTest"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="fitStart"
+        android:background="@color/gray01"
+        android:visibility="invisible"
+        android:layout_above="@id/paint_buttonToolLl" />
+
+    <!--Layout for button at bottom-->
+<LinearLayout
+    android:id="@+id/paint_buttonToolLl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@color/design_default_color_primary"
+    android:layout_alignParentBottom="true">
+
+    <!--Button: Add/Remove Favorite-->
+    <Button
+        android:id="@+id/paint_btnErase"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:drawableTop="@android:drawable/ic_menu_edit"
+        android:text="Eraser"
+        android:textSize="10sp"
+        android:textAllCaps="false"
+        android:background="@color/design_default_color_primary"/>
+
+    <!--Button: Add comment -->
+    <Button
+        android:id="@+id/paint_btnUndo"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:drawableTop="@android:drawable/ic_menu_revert"
+        android:drawableTint="@color/white"
+        android:text="Undo"
+        android:textSize="10sp"
+        android:textAllCaps="false"
+        android:background="@color/design_default_color_primary"/>
+
+    <Button
+        android:id="@+id/paint_btnSearch"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:drawableTop="@android:drawable/ic_menu_search"
+        android:drawableTint="@color/white"
+        android:text="Search"
+        android:textSize="10sp"
+        android:textAllCaps="false"
+        android:background="@color/design_default_color_primary"/>
+
+    <Button
+        android:id="@+id/paint_btnRedo"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:drawableTop="@android:drawable/ic_menu_rotate"
+        android:drawableTint="@color/white"
+        android:text="Redo"
+        android:textSize="10sp"
+        android:textAllCaps="false"
+        android:background="@color/design_default_color_primary"/>
+
+    <Button
+        android:id="@+id/paint_btnClear"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:drawableTop="@android:drawable/ic_menu_close_clear_cancel"
+        android:drawableTint="@color/white"
+        android:text="Clear"
+        android:textSize="10sp"
+        android:textAllCaps="false"
+        android:background="@color/design_default_color_primary"/>
+
+
+
+</LinearLayout>
+
+</RelativeLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<LinearLayout-->
+    <!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:orientation="vertical"-->
+    <!--    tools:context=".activities.PaintActivity">-->
+
+    <!--    <com.technifysoft.bookapp.tools.SimpleDrawingView-->
+    <!--        android:id="@+id/simpleDrawingView1"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_weight="8">-->
+
+    <!--    </com.technifysoft.bookapp.tools.SimpleDrawingView>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_weight="1"-->
+    <!--        android:background="@color/purple_500">-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/paint_btnErase"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:textAllCaps="false"-->
+    <!--            android:text="Eraser" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="30dp"-->
+    <!--            android:layout_height="wrap_content"/>-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/paint_btnClear"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:textAllCaps="false"-->
+    <!--            android:text="Clear"/>-->
+
+    <!--    </LinearLayout>-->
+
+    <!--</LinearLayout>-->

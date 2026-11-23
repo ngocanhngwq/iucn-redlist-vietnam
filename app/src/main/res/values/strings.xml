@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">IUCN Red List VietNam</string>
+    <string name="new_user_signup">New User? <b>SignUp</b></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string><!--make SignUp bold-->
+    <string name="note"><a href="https://drive.google.com/file/d/1GS9nvbEQ1Fc9C1a2s8mLHd3AD1Nf4l0K/view?usp=sharing">NOTE</a></string>
+</resources>
